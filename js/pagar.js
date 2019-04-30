@@ -19,7 +19,10 @@ function listarMeiosPagamentos(){
         amount: 500.00,
         success: function(retorno) {
             // Retorna os meios de pagamento disponíveis.
-            console.log(retorno);
+            // retornar o nome dos cartões de credito
+            $.each(retorno.paymentMethods.CREDIT_CARD.options, function (i, obj){
+                $('.meio-pagamento').append("<span>"+ obj.name +"</span>");
+            });
         },
         error: function(retorno) {
             // Callback para chamadas que falharam.
