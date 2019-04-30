@@ -16,6 +16,7 @@
         <label>Número do cartão</label>
         <input type="text" name="numCartao" id="numCartao">
     </form>
+    <div class="bandeira-cartao"></div>
 
     <div class="meio-pagamento"></div>
 
