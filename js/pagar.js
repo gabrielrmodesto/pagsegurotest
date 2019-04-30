@@ -27,7 +27,7 @@ function listarMeiosPagamentos(){
                 //$('.meio-pagamento').append("<span>"+ obj.name +"</span><br>");
             });
             $('.meio-pagamento').append("<div>Boleto</div>");
-            $('.meio-pagamento').append("<span class='img-band'><img src='https://stc.pagseguro.uol.com.br'"+retorno.paymentMethods.BOLETO.options.BOLETO.images.SMALL.path+"'></span>");
+            $('.meio-pagamento').append("<span class='img-band'><img src='https://stc.pagseguro.uol.com.br"+retorno.paymentMethods.BOLETO.options.BOLETO.images.SMALL.path+"'></span>");
         },
         error: function(retorno) {
             // Callback para chamadas que falharam.
