@@ -7,10 +7,7 @@ function pagamento(){
         success: function (retorno){
             PagSeguroDirectPayment.setSessionId(retorno.id);
         }
-        complete: function(retorno) {
-            // Callback para todas chamadas.
-            listarMeiosPagamentos();
-        }
+        
     });
 }
 
