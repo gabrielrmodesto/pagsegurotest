@@ -59,7 +59,7 @@ $('#numCartao').on('keyup', function(){
         success: function(retorno) {
           //bandeira encontrada
           var imgBand = retorno.brand.name;
-          $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'");
+          $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'>");
         },
         error: function(retorno) {
           //tratamento do erro
