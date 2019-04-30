@@ -63,6 +63,7 @@ $('#numCartao').on('keyup', function(){
         },
         error: function(retorno) {
           //tratamento do erro
+          $('.bandeira-cartao').empty();
         },
         complete: function(retorno) {
           //tratamento comum para todas chamadas
