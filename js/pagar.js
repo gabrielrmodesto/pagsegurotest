@@ -14,16 +14,16 @@ function pagamento(){
     });
 }
 
-function listarMeiosPagamentos(){
+function listarMeiosPagamentos(){ 
     PagSeguroDirectPayment.getPaymentMethods({
         amount: 500.00,
         success: function(retorno) {
             // Retorna os meios de pagamento disponíveis.
             $.each(retorno.paymentMethods.CREDIT_CARD.options, function (i, obj){
                 // retornar imagens dos cartões
-                $('.meio-pagamento').append("<span><img src='https://stc.pagseguro.uol.com.br"+obj.images.SMALL.path+"'></span>")
+                $('.meio-pagamento').append("<span class='img-band'><img src='https://stc.pagseguro.uol.com.br"+obj.images.SMALL.path+"'></span>")
                 // retornar o nome dos cartões de credito
-                $('.meio-pagamento').append("<span>"+ obj.name +"</span><br>");
+                //$('.meio-pagamento').append("<span>"+ obj.name +"</span><br>");
             });
         },
         error: function(retorno) {
