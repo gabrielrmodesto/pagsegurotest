@@ -10,19 +10,3 @@ function pagamento(){
         
     });
 }
-
-function listarMeiosPagamentos(){
-    PagSeguroDirectPayment.getPaymentMethods({
-        amount: 500.00,
-        success: function(retorno) {
-            // Retorna os meios de pagamento disponíveis.
-            console.log(retorno);
-        },
-        error: function(retorno) {
-            // Callback para chamadas que falharam.
-        },
-        complete: function(retorno) {
-            // Callback para todas chamadas.
-        }
-    });
-}
