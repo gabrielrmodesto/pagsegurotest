@@ -2,7 +2,7 @@
 
 $sandbox = true;
 
-define("URL", "http://localhost/apppagseguro/");
+define("URL", "https://pagseguroapptest.herokuapp.com/");
 
 if($sandbox){
     define("EMAIL_PAGSEGURO", "gabriel.modesto@nexttecnologiadainformacao.com.br");
