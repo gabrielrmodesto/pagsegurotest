@@ -55,9 +55,10 @@ $('#numCartao').on('keyup', function(){
     var numCartao = $(this).val();
 
     PagSeguroDirectPayment.getBrand({
-        cardBin: 411111,
+        cardBin: numCartao,
         success: function(retorno) {
           //bandeira encontrada
+          console.log(retorno);
         },
         error: function(retorno) {
           //tratamento do erro
