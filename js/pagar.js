@@ -26,8 +26,19 @@ function listarMeiosPagamentos(){
                 // retornar o nome dos cartões de credito
                 //$('.meio-pagamento').append("<span>"+ obj.name +"</span><br>");
             });
+
+            //retornando pagamento por boleto
             $('.meio-pagamento').append("<div>Boleto</div>");
             $('.meio-pagamento').append("<span class='img-band'><img src='https://stc.pagseguro.uol.com.br"+retorno.paymentMethods.BOLETO.options.BOLETO.images.SMALL.path+"'></span>");
+
+            // retornando pagamento por débito online
+            $('.meio-pagamento').append("<div>Débito Online</div>");
+            $.each(retorno.paymentMethods.ONLINE_DEBIT.options, function (i, obj){
+                // retornar imagens dos cartões
+                $('.meio-pagamento').append("<span class='img-band'><img src='https://stc.pagseguro.uol.com.br"+obj.images.SMALL.path+"'></span>");
+                // retornar o nome dos cartões de credito
+                //$('.meio-pagamento').append("<span>"+ obj.name +"</span><br>");
+            });
         },
         error: function(retorno) {
             // Callback para chamadas que falharam.
