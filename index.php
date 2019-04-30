@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <button onclick="pagamento()">Pagar</button>
+    <!-- <button onclick="pagamento()">Pagar</button> -->
     <span class="endereco" data-endereco="<?=URL;?>"></span>
+
+    <form action="">
+        <label>Número do cartão</label>
+        <input type="text" name="numCartao" id="numCartao">
+    </form>
 
     <div class="meio-pagamento"></div>
 

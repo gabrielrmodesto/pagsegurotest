@@ -1,3 +1,5 @@
+pagamento();
+
 function pagamento(){
     var endereco = jQuery('.endereco').attr("data-endereco");
     $.ajax({
@@ -48,3 +50,20 @@ function listarMeiosPagamentos(){
         }
     });
 }
+
+$('#numCartao').on('keyup', function(){
+    var numCartao = $(this).val();
+
+    PagSeguroDirectPayment.getBrand({
+        cardBin: 411111,
+        success: function(retorno) {
+          //bandeira encontrada
+        },
+        error: function(retorno) {
+          //tratamento do erro
+        },
+        complete: function(retorno) {
+          //tratamento comum para todas chamadas
+        }
+    });
+});
