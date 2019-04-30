@@ -21,7 +21,7 @@ function listarMeiosPagamentos(){
             // Retorna os meios de pagamento disponíveis.
             // retornar o nome dos cartões de credito
             $.each(retorno.paymentMethods.CREDIT_CARD.options, function (i, obj){
-                $('.meio-pagamento').append("<span>"+ obj.name +"</span>");
+                $('.meio-pagamento').append("<span>"+ obj.name +"</span><br>");
             });
         },
         error: function(retorno) {
