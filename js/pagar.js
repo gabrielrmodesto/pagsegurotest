@@ -1,5 +1,6 @@
 pagamento();
-
+//valor da compra
+var valorTotal = 600.00;
 function pagamento(){
     var endereco = jQuery('.endereco').attr("data-endereco");
     $.ajax({
@@ -18,7 +19,7 @@ function pagamento(){
 
 function listarMeiosPagamentos(){ 
     PagSeguroDirectPayment.getPaymentMethods({
-        amount: 500.00,
+        amount: valorTotal,
         success: function(retorno) {
             // Retorna os meios de pagamento disponíveis.
             $('.meio-pagamento').append("<div>Cartão de Crédito</div>");
@@ -63,6 +64,7 @@ $('#numCartao').on('keyup', function(){
               $('#msg-erro').empty();
               var imgBand = retorno.brand.name;
               $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'>");
+              recuperaParcelas(imgBand);
             },
             error: function(retorno) {
               //tratamento do erro
@@ -75,3 +77,22 @@ $('#numCartao').on('keyup', function(){
         });
     }
 });
+//parcelamento da compra
+function recuperaParcelas(bandeira){
+    PagSeguroDirectPayment.getInstallments({
+		amount: valorTotal,
+		//parcelas com juros
+		maxInstallmentNoInterest: 3,
+		brand: 'visa',
+		success: function(retorno){
+			// Retorna as opções de parcelamento disponíveis
+			console.log(retorno);
+		},
+		error: function(retorno) {
+			// callback para chamadas que falharam.
+		},
+		complete: function(retorno){
+			// Callback para todas chamadas.
+		}
+    });
+}
