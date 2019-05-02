@@ -109,8 +109,11 @@ $("#qtdParcelas").change(function(){
     $('#valorParcelas').val($("#qtdParcelas").find(':selected').attr('data-parcelas'));
 });
 
-//recuperar token do cartao de credito
-function recuperaToken(){
+
+// recuperar hash do cartão
+$("#formPagamento").on("submit", function(event){
+    event.preventDefault();
+
     PagSeguroDirectPayment.createCardToken({
         cardNumber: '4111111111111111', // Número do cartão de crédito
         brand: 'visa', // Bandeira do cartão
@@ -126,17 +129,20 @@ function recuperaToken(){
         },
         complete: function(retorno) {
             // Callback para todas chamadas.
+            recuperaHash();
         }
-     });
-}
-// recuperar hash do cartão
-$("#formPagamento").on("submit", function(event){
-    event.preventDefault();
-    PagSeguroDirectPayment.onSenderHashReady(function(response){
-        // if(response.status == 'error') {
-        //     console.log(response.message);
-        //     return false;
-        // }
-       $("#hashCartao").val(response.senderHash); //Hash estará disponível nesta variável.
     });
 });
+
+function recuperaHash (){
+    PagSeguroDirectPayment.onSenderHashReady(function(retorno){
+        if(retorno.status == 'error') {
+            console.log(retorno.message);
+            return false;
+        }else{
+            $("#hashCartao").val(retorno.senderHash); //Hash estará disponível nesta variável.
+            var dados = $("#formPagamento").serialize();
+            console.log(dados);
+        }
+    });
+}
