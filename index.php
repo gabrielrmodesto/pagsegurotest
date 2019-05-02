@@ -88,13 +88,14 @@
 
         <h2>Dados do Cartão</h2>
         <label>Número do cartão</label>
-        <input type="text" name="numCartao" id="numCartao"><br><br>
+        <input type="text" name="numCartao" id="numCartao">
+        <span class="bandeira-cartao"></span><br><br>
 
         <label>CVV do cartão</label>
         <input type="text" name="cvvCartao" id="cvvCartao" maxlength="3"><br><br>
 
         <label>Bandeira</label>
-        <input type="text" name="bandeiraCartao" id="bandeiraCartao"><br><br>
+        <input type="hidden" name="bandeiraCartao" id="bandeiraCartao">
 
         <label>Mês de Validade</label>
         <input type="text" name="mesCartao" id="mesCartao" maxlength="2"><br><br>
@@ -151,8 +152,8 @@
         <input type="submit" name="btnComprar" id="btnComprar" value="Comprar">
 
     </form>
-    <div class="bandeira-cartao"></div>
-    <div class="meio-pagamento"></div>
+    
+    <!-- <div class="meio-pagamento"></div> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script src="<?=SCRIPT_PAGSEGURO;?>"></script>
 <script src="js/pagar.js"></script>
