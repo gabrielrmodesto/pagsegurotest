@@ -15,6 +15,12 @@
         <label>Número do cartão</label>
         <input type="text" name="numCartao" id="numCartao"><br>
 
+        <label>Bandeira do cartão</label>
+        <input type="text" name="bandeiraCartao" id="bandeiraCartao"><br>
+
+        <label>CVV do cartão</label>
+        <input type="text" name="cvvCartao" id="cvvCartao"><br>
+
         <label for="qtdParcelas">Parcelas</label>
         <select name="qtdParcelas" id="qtdParcelas" class="qtdParcelas">
             <option value="">Selecione</option>
