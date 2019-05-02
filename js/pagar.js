@@ -89,7 +89,7 @@ function recuperaParcelas(bandeira){
 			//quantidade de parcelas
 			$.each(retorno.installments, function(ia, obja){
 				$.each(obja, function(ib, objb){
-					console.log(objb);
+					$('#qtdParcelas').show().append("<option value='"+objb.installmentAmount+"'>"+objb.quantity+" parcelas de R$"+objb.installmentAmount+"</option>")
 				});
 			});
 		},

@@ -15,6 +15,9 @@
     <form action="">
         <label>Número do cartão</label>
         <input type="text" name="numCartao" id="numCartao">
+        <select name="qtdParcelas" id="qtdParcelas" class="qtdParcelas">
+            <option value="">Selecione</option>
+        </select>
     </form>
     <div class="bandeira-cartao"></div>
 
