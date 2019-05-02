@@ -60,6 +60,7 @@ $('#numCartao').on('keyup', function(){
             cardBin: numCartao,
             success: function(retorno) {
               //bandeira encontrada
+              $('#msg-erro').empty();
               var imgBand = retorno.brand.name;
               $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'>");
             },
