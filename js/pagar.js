@@ -113,14 +113,14 @@ function recuperaToken(){
         expirationMonth: '12', // Mês da expiração do cartão
         expirationYear: '2030', // Ano da expiração do cartão, é necessário os 4 dígitos.
         success: function(retorno) {
-             // Retorna o cartão tokenizado.
-             console.log(retorno);
+            // Retorna o cartão tokenizado.
+            $("#tokenCartao").val(retorno.card.token);
         },
         error: function(retorno) {
-                 // Callback para chamadas que falharam.
+            // Callback para chamadas que falharam.
         },
         complete: function(retorno) {
-             // Callback para todas chamadas.
+            // Callback para todas chamadas.
         }
      });
 }

@@ -14,10 +14,13 @@
     <span id="msg-erro"></span>
     <form action="">
         <label>Número do cartão</label>
-        <input type="text" name="numCartao" id="numCartao">
+        <input type="text" name="numCartao" id="numCartao"><br>
+        <label>Parcelas</label>
         <select name="qtdParcelas" id="qtdParcelas" class="qtdParcelas">
             <option value="">Selecione</option>
-        </select>
+        </select><br>
+        <label>Token do cartão</label>
+        <input type="text" name="tokenCartao" id="tokenCartao" />
     </form>
     <div class="bandeira-cartao"></div>
 
