@@ -14,35 +14,35 @@
     <form action="" id="formPagamento">
         <h2>Dados da Compra</h2>
 
-        <label>Método de Pagamento</label>
-        <input type="text" name="paymentMethod" id="paymentMethod" value="creditCard"><br><br>
+        
+        <input type="hidden" name="paymentMethod" id="paymentMethod" value="creditCard"><br><br>
 
-        <label>E-mail da Loja</label>
-        <input type="text" name="receiverEmail" id="receiverEmail" value="<?php echo EMAIL_LOJA; ?>"><br><br>
+        
+        <input type="hidden" name="receiverEmail" id="receiverEmail" value="<?php echo EMAIL_LOJA; ?>"><br><br>
 
-        <label>Moeda de Pagamento</label>
-        <input type="text" name="currency" id="currency" value="<?php echo MOEDA_PAGAMENTO; ?>"><br><br>
+        
+        <input type="hidden" name="currency" id="currency" value="<?php echo MOEDA_PAGAMENTO; ?>"><br><br>
 
-        <label>Desconto ou Taxa</label>
-        <input type="text" name="extraAmount" id="extraAmount" value=""><br><br>
+        
+        <input type="hidden" name="extraAmount" id="extraAmount" value=""><br><br>
 
-        <label>ID do Item</label>
-        <input type="text" name="itemId1" id="itemId1" value="0001"><br><br>
+        
+        <input type="hidden" name="itemId1" id="itemId1" value="0001"><br><br>
 
-        <label>Descrição do Item</label>
-        <input type="text" name="itemDescription1" id="itemDescription1" value="Curso de PHP Orientado a Objetos"><br><br>
+        
+        <input type="hidden" name="itemDescription1" id="itemDescription1" value="Curso de PHP Orientado a Objetos"><br><br>
 
-        <label>Preço do Item</label>
-        <input type="text" name="itemAmount1" id="itemAmount1" value="600.00"><br><br>
+        
+        <input type="hidden" name="itemAmount1" id="itemAmount1" value="600.00"><br><br>
 
-        <label>Quantidade do Item</label>
-        <input type="text" name="itemQuantity1" id="itemQuantity1" value="1"><br><br>
+        
+        <input type="hidden" name="itemQuantity1" id="itemQuantity1" value="1"><br><br>
 
-        <label>URL de Notificação</label>
-        <input type="text" name="notificationURL" id="notificationURL" value="<?php echo URL_NOTIFICACAO; ?>"><br><br>
+        
+        <input type="hidden" name="notificationURL" id="notificationURL" value="<?php echo URL_NOTIFICACAO; ?>"><br><br>
 
-        <label>Reference do Item</label>
-        <input type="text" name="reference" id="reference" value="1001"><br><br>
+        
+        <input type="hidden" name="reference" id="reference" value="1001"><br><br>
 
         <h2>Dados do Comprador</h2>
 
