@@ -124,3 +124,14 @@ function recuperaToken(){
         }
      });
 }
+// recuperar hash do cartão
+$("#formPagamento").on("submit", function(event){
+    event.preventDefault();
+    PagSeguroDirectPayment.onSenderHashReady(function(response){
+        // if(response.status == 'error') {
+        //     console.log(response.message);
+        //     return false;
+        // }
+       console.log(response.senderHash); //Hash estará disponível nesta variável.
+    });
+});
