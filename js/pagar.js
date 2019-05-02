@@ -86,7 +86,12 @@ function recuperaParcelas(bandeira){
 		brand: 'visa',
 		success: function(retorno){
 			// Retorna as opções de parcelamento disponíveis
-			console.log(retorno);
+			//quantidade de parcelas
+			$.each(retorno.installments, function(ia, obja){
+				$.each(obja, function(ib, objb){
+					console.log(objb);
+				});
+			});
 		},
 		error: function(retorno) {
 			// callback para chamadas que falharam.
