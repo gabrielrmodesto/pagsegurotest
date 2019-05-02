@@ -20,6 +20,7 @@
         </select><br>
         <label>Token do cartão</label>
         <input type="text" name="tokenCartao" id="tokenCartao" />
+        <input type="text" name="btnComprar" id="btnComprar" />
     </form>
     <div class="bandeira-cartao"></div>
 
