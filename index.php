@@ -18,6 +18,8 @@
         <select name="qtdParcelas" id="qtdParcelas" class="qtdParcelas">
             <option value="">Selecione</option>
         </select><br>
+        <label>Valor de parcelas</label>
+        <input type="text" name="valorParcelas" id="valorParcelas"><br>
         <label>Token do cartão</label>
         <input type="text" name="tokenCartao" id="tokenCartao" /><br>
         <label>Identificador dos dados do cartão</label>
