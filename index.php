@@ -19,13 +19,13 @@
         <input type="text" name="bandeiraCartao" id="bandeiraCartao"><br>
 
         <label>CVV do cartão</label>
-        <input type="text" name="cvvCartao" id="cvvCartao"><br>
+        <input type="text" name="cvvCartao" id="cvvCartao" maxlength="3"><br>
 
         <label>Mês do cartão</label>
-        <input type="text" name="mesCartao" id="mesCartao"><br>
+        <input type="text" name="mesCartao" id="mesCartao" maxlength="2"><br>
 
         <label>Ano do cartão</label>
-        <input type="text" name="anoCartao" id="anoCartao"><br>
+        <input type="text" name="anoCartao" id="anoCartao" maxlength="4"><br>
 
         <label for="qtdParcelas">Parcelas</label>
         <select name="qtdParcelas" id="qtdParcelas" class="qtdParcelas">

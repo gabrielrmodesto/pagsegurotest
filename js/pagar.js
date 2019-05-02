@@ -65,7 +65,7 @@ $('#numCartao').on('keyup', function(){
               $('#msg-erro').empty();
               var imgBand = retorno.brand.name;
               $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'>");
-              $("#bandeiraCartao").val(imgBand);
+            //   $("#bandeiraCartao").val(imgBand);
               recuperaParcelas(imgBand);
             },
             error: function(retorno) {
