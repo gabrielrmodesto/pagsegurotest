@@ -15,7 +15,7 @@
         <label>Número do cartão</label>
         <input type="text" name="numCartao" id="numCartao"><br>
 
-        <label for="qtdParcelas" id="qtdParcelas">Parcelas</label>
+        <label for="qtdParcelas">Parcelas</label>
         <select name="qtdParcelas" id="qtdParcelas" class="qtdParcelas">
             <option value="">Selecione</option>
         </select><br>
