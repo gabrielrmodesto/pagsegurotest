@@ -92,7 +92,7 @@ function recuperaParcelas(bandeira){
 				$.each(obja, function(ib, objb){
                     //formatar valor para real
                     var valorParcela = objb.installmentAmount.toFixed(2).replace(".",",");
-					$('#qtdParcelas').show().append("<option value='"+objb.installmentAmount+"'>"+objb.quantity+"x R$"+valorParcela+"</option>")
+					$('#qtdParcelas').show().append("<option value='"+objb.installmentAmount+"' data-parcelas='"+objb.installmentAmount+"'>"+objb.quantity+"x R$"+valorParcela+"</option>")
 				});
 			});
 		},
