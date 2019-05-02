@@ -53,20 +53,24 @@ function listarMeiosPagamentos(){
 
 $('#numCartao').on('keyup', function(){
     var numCartao = $(this).val();
+    var qtdDigitos = numCartao.length;
 
-    PagSeguroDirectPayment.getBrand({
-        cardBin: numCartao,
-        success: function(retorno) {
-          //bandeira encontrada
-          var imgBand = retorno.brand.name;
-          $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'>");
-        },
-        error: function(retorno) {
-          //tratamento do erro
-          $('.bandeira-cartao').empty();
-        },
-        complete: function(retorno) {
-          //tratamento comum para todas chamadas
-        }
-    });
+    if(qtdDigitos == 6){
+        PagSeguroDirectPayment.getBrand({
+            cardBin: numCartao,
+            success: function(retorno) {
+              //bandeira encontrada
+              var imgBand = retorno.brand.name;
+              $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'>");
+            },
+            error: function(retorno) {
+              //tratamento do erro
+              $('.bandeira-cartao').empty();
+              $('#msg-erro').html("Cartão inválido");
+            },
+            complete: function(retorno) {
+              //tratamento comum para todas chamadas
+            }
+        });
+    }
 });

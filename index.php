@@ -11,7 +11,7 @@
 <body>
     <!-- <button onclick="pagamento()">Pagar</button> -->
     <span class="endereco" data-endereco="<?=URL;?>"></span>
-
+    <span id="msg-erro"></span>
     <form action="">
         <label>Número do cartão</label>
         <input type="text" name="numCartao" id="numCartao">
