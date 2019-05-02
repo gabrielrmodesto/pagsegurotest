@@ -21,6 +21,12 @@
         <label>CVV do cartão</label>
         <input type="text" name="cvvCartao" id="cvvCartao"><br>
 
+        <label>Mês do cartão</label>
+        <input type="text" name="mesCartao" id="mesCartao"><br>
+
+        <label>Ano do cartão</label>
+        <input type="text" name="anoCartao" id="anoCartao"><br>
+
         <label for="qtdParcelas">Parcelas</label>
         <select name="qtdParcelas" id="qtdParcelas" class="qtdParcelas">
             <option value="">Selecione</option>

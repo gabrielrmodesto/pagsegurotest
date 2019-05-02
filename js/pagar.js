@@ -65,8 +65,8 @@ $('#numCartao').on('keyup', function(){
               $('#msg-erro').empty();
               var imgBand = retorno.brand.name;
               $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'>");
-              $("#bandeiraCartao").val(imgBand);
-              recuperaParcelas(imgBand);
+              var bandeira = $("#bandeiraCartao").val(imgBand);
+              recuperaParcelas(bandeira);
             },
             error: function(retorno) {
               //tratamento do erro
@@ -119,8 +119,8 @@ $("#formPagamento").on("submit", function(event){
         cardNumber: $("#numCartao").val(), // Número do cartão de crédito
         brand: $("#bandeiraCartao").val(), // Bandeira do cartão
         cvv: $("#cvvCartao").val(), // CVV do cartão
-        expirationMonth: '12', // Mês da expiração do cartão
-        expirationYear: '2030', // Ano da expiração do cartão, é necessário os 4 dígitos.
+        expirationMonth: $("#mesCartao").val(), // Mês da expiração do cartão
+        expirationYear: $("#anoCartao").val(), // Ano da expiração do cartão, é necessário os 4 dígitos.
         success: function(retorno) {
             // Retorna o cartão tokenizado.
             $("#tokenCartao").val(retorno.card.token);
