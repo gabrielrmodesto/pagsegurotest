@@ -105,8 +105,8 @@ function recuperaParcelas(bandeira){
     });
 }
 //valor da parcela no form
-$("#qtdParcela").change(function(){
-    $('#valorParcelas').val($("#qtdParcela").find(':selected').attr('data-parcelas'));
+$("#qtdParcelas").change(function(){
+    $('#valorParcelas').val($("#qtdParcelas").find(':selected').attr('data-parcelas'));
 });
 
 //recuperar token do cartao de credito

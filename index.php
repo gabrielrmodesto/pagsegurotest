@@ -15,7 +15,7 @@
         <label>Número do cartão</label>
         <input type="text" name="numCartao" id="numCartao"><br>
 
-        <label class="qtdParcelas">Parcelas</label>
+        <label for="qtdParcelas" class="qtdParcelas">Parcelas</label>
         <select name="qtdParcelas" id="qtdParcelas" class="qtdParcelas">
             <option value="">Selecione</option>
         </select><br>
@@ -29,7 +29,7 @@
         <label>Identificador dos dados do cartão</label>
         <input type="text" name="hashCartao" id="hashCartao" />
         <input type="submit" name="btnComprar" id="btnComprar" value="Comprar" />
-        
+
     </form>
     <div class="bandeira-cartao"></div>
     <div class="meio-pagamento"></div>
