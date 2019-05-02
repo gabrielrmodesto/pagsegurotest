@@ -94,7 +94,6 @@
         <label>CVV do cartão</label>
         <input type="text" name="cvvCartao" id="cvvCartao" maxlength="3"><br><br>
 
-        <label>Bandeira</label>
         <input type="hidden" name="bandeiraCartao" id="bandeiraCartao">
 
         <label>Mês de Validade</label>
