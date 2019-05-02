@@ -85,11 +85,13 @@ function recuperaParcelas(bandeira){
 		maxInstallmentNoInterest: 3,
 		brand: 'visa',
 		success: function(retorno){
-			// Retorna as opções de parcelamento disponíveis
+            // Retorna as opções de parcelamento disponíveis
+            //formatar valor para real
+            var valorParcela = objb.installmentAmount.toFixed(2).replace(".",",");
 			//quantidade de parcelas
 			$.each(retorno.installments, function(ia, obja){
 				$.each(obja, function(ib, objb){
-					$('#qtdParcelas').show().append("<option value='"+objb.installmentAmount+"'>"+objb.quantity+" parcelas de R$"+objb.installmentAmount+"</option>")
+					$('#qtdParcelas').show().append("<option value='"+objb.installmentAmount+"'>"+objb.quantity+"x R$"+valorParcela+"</option>")
 				});
 			});
 		},
