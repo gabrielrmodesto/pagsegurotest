@@ -132,6 +132,6 @@ $("#formPagamento").on("submit", function(event){
         //     console.log(response.message);
         //     return false;
         // }
-       console.log(response.senderHash); //Hash estará disponível nesta variável.
+       $("#hashCartao").val(response.senderHash); //Hash estará disponível nesta variável.
     });
 });
