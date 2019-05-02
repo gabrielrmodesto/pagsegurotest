@@ -26,8 +26,6 @@ function listarMeiosPagamentos(){
             $.each(retorno.paymentMethods.CREDIT_CARD.options, function (i, obj){
                 // retornar imagens dos cartões
                 $('.meio-pagamento').append("<span class='img-band'><img src='https://stc.pagseguro.uol.com.br"+obj.images.SMALL.path+"'></span>");
-                // retornar o nome dos cartões de credito
-                //$('.meio-pagamento').append("<span>"+ obj.name +"</span><br>");
             });
 
             //retornando pagamento por boleto
@@ -39,8 +37,6 @@ function listarMeiosPagamentos(){
             $.each(retorno.paymentMethods.ONLINE_DEBIT.options, function (i, obj){
                 // retornar imagens dos cartões
                 $('.meio-pagamento').append("<span class='img-band'><img src='https://stc.pagseguro.uol.com.br"+obj.images.SMALL.path+"'></span>");
-                // retornar o nome dos cartões de credito
-                //$('.meio-pagamento').append("<span>"+ obj.name +"</span><br>");
             });
         },
         error: function(retorno) {
@@ -48,7 +44,7 @@ function listarMeiosPagamentos(){
         },
         complete: function(retorno) {
             // Callback para todas chamadas.
-            recuperaToken();
+            //recuperaToken();
         }
     });
 }
@@ -65,16 +61,13 @@ $('#numCartao').on('keyup', function(){
               $('#msg-erro').empty();
               var imgBand = retorno.brand.name;
               $('.bandeira-cartao').html("<img src='https://stc.pagseguro.uol.com.br/public/img/payment-methods-flags/42x20/"+imgBand+".png'>");
-            //   $("#bandeiraCartao").val(imgBand);
+              $("#bandeiraCartao").val(imgBand);
               recuperaParcelas(imgBand);
             },
             error: function(retorno) {
               //tratamento do erro
               $('.bandeira-cartao').empty();
               $('#msg-erro').html("Cartão inválido");
-            },
-            complete: function(retorno) {
-              //tratamento comum para todas chamadas
             }
         });
     }
