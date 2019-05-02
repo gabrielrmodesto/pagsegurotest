@@ -48,6 +48,7 @@ function listarMeiosPagamentos(){
         },
         complete: function(retorno) {
             // Callback para todas chamadas.
+            recuperaToken();
         }
     });
 }
@@ -102,4 +103,24 @@ function recuperaParcelas(bandeira){
 			// Callback para todas chamadas.
 		}
     });
+}
+//recuperar token do cartao de credito
+function recuperaToken(){
+    PagSeguroDirectPayment.createCardToken({
+        cardNumber: '4111111111111111', // Número do cartão de crédito
+        brand: 'visa', // Bandeira do cartão
+        cvv: '123', // CVV do cartão
+        expirationMonth: '12', // Mês da expiração do cartão
+        expirationYear: '2030', // Ano da expiração do cartão, é necessário os 4 dígitos.
+        success: function(retorno) {
+             // Retorna o cartão tokenizado.
+             console.log(retorno);
+        },
+        error: function(retorno) {
+                 // Callback para chamadas que falharam.
+        },
+        complete: function(retorno) {
+             // Callback para todas chamadas.
+        }
+     });
 }
