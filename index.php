@@ -11,37 +11,25 @@
 <body>
     <span class="endereco" data-endereco="<?=URL;?>"></span>
     <span id="msg-erro"></span>
-    <form action="" id="formPagamento">
-        <h2>Dados da Compra</h2>
-
-        
+    <form action="" id="formPagamento">     
         <input type="hidden" name="paymentMethod" id="paymentMethod" value="creditCard"><br><br>
-
         
         <input type="hidden" name="receiverEmail" id="receiverEmail" value="<?php echo EMAIL_LOJA; ?>"><br><br>
-
         
         <input type="hidden" name="currency" id="currency" value="<?php echo MOEDA_PAGAMENTO; ?>"><br><br>
 
-        
         <input type="hidden" name="extraAmount" id="extraAmount" value=""><br><br>
 
-        
         <input type="hidden" name="itemId1" id="itemId1" value="0001"><br><br>
 
-        
         <input type="hidden" name="itemDescription1" id="itemDescription1" value="Curso de PHP Orientado a Objetos"><br><br>
 
-        
         <input type="hidden" name="itemAmount1" id="itemAmount1" value="600.00"><br><br>
 
-        
         <input type="hidden" name="itemQuantity1" id="itemQuantity1" value="1"><br><br>
 
-        
         <input type="hidden" name="notificationURL" id="notificationURL" value="<?php echo URL_NOTIFICACAO; ?>"><br><br>
 
-        
         <input type="hidden" name="reference" id="reference" value="1001"><br><br>
 
         <h2>Dados do Comprador</h2>
