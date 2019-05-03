@@ -65,10 +65,9 @@
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_POSTFIELDS, $buildQuery);
     $retorno = curl_exec($curl);
-    $xml = simplexml_load_string($retorno);
     curl_close($curl);
 
-    
+    $xml = simplexml_load_string($retorno);
 
     $retorna = ['erro' => true, 'dados' => $xml];
     header('Content-Type: application/json');
