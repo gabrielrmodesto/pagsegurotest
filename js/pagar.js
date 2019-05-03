@@ -137,6 +137,20 @@ function recuperaHash (){
             $("#hashCartao").val(retorno.senderHash); //Hash estará disponível nesta variável.
             var dados = $("#formPagamento").serialize();
             console.log(dados);
+
+            var endereco = jQuery('.endereco').attr("data-endereco");
+            $.ajax({
+                method: "POST",
+                url: endereco + "processa_pagamento.php",
+                data: dados,
+                dataType: "json",
+                success: function(retorna){
+                    console.log("Sucesso" + retorna);
+                },
+                error: function(retorna){
+                    console.log("Erro");
+                }
+            });
         }
     });
 }

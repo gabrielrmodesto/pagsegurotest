@@ -35,45 +35,45 @@
         <h2>Dados do Comprador</h2>
 
         <label>Nome</label>
-        <input type="text" name="senderName" id="senderName" placeholder="Nome completo" required><br><br>
+        <input type="text" name="senderName" id="senderName" placeholder="Nome completo" required value="Jose Comprador"><br><br>
 
         <label>Data de Nascimento</label>
-        <input type="text" name="creditCardHolderBirthDate" id="creditCardHolderBirthDate" placeholder="Data de Nascimento. Ex: 12/12/1912" required><br><br>
+        <input type="text" name="creditCardHolderBirthDate" id="creditCardHolderBirthDate" placeholder="Data de Nascimento. Ex: 12/12/1912" required value="12/12/1992"><br><br>
 
         <label>CPF</label>
-        <input type="text" name="senderCPF" id="senderCPF" placeholder="CPF sem traço" required><br><br>
+        <input type="text" name="senderCPF" id="senderCPF" placeholder="CPF sem traço" required value="22111944785"><br><br>
 
         <label>Telefone</label>
-        <input type="text" name="senderAreaCode" id="senderAreaCode" placeholder="DDD" required>
-        <input type="text" name="senderPhone" id="senderPhone" placeholder="Somente número" required><br><br>
+        <input type="text" name="senderAreaCode" id="senderAreaCode" placeholder="DDD" required value="11">
+        <input type="text" name="senderPhone" id="senderPhone" placeholder="Somente número" required value="56273440"><br><br>
 
         <label>E-mail</label>
-        <input type="email" name="senderEmail" id="senderEmail" placeholder="E-mail do comprador" required><br><br>
+        <input type="email" name="senderEmail" id="senderEmail" placeholder="E-mail do comprador" required value="c35765315136898999659@sandbox.pagseguro.com.br"><br><br>
 
         <h2>Endereço de Entrega</h2>
         <label>Entrega</label>
         <input type="text" name="shippingAddressRequired" id="shippingAddressRequired" value="true" required><br><br>
 
         <label>Logradouro</label>
-        <input type="text" name="shippingAddressStreet" id="shippingAddressStreet" placeholder="Av. Rua"><br><br>
+        <input type="text" name="shippingAddressStreet" id="shippingAddressStreet" placeholder="Av. Rua" value="Av. Brig. Faria Lima"><br><br>
 
         <label>Número</label>
-        <input type="text" name="shippingAddressNumber" id="shippingAddressNumber" placeholder="Número"><br><br>
+        <input type="text" name="shippingAddressNumber" id="shippingAddressNumber" placeholder="Número" value="1384"><br><br>
 
         <label>Complemento</label>
-        <input type="text" name="shippingAddressComplement" id="shippingAddressComplement" placeholder="Complemento"><br><br>
+        <input type="text" name="shippingAddressComplement" id="shippingAddressComplement" placeholder="Complemento" value="5o andar"><br><br>
 
         <label>Bairro</label>
-        <input type="text" name="shippingAddressDistrict" id="shippingAddressDistrict" placeholder="Bairro"><br><br>
+        <input type="text" name="shippingAddressDistrict" id="shippingAddressDistrict" placeholder="Bairro" value="Jardim Paulistano"><br><br>
 
         <label>CEP</label>
-        <input type="text" name="shippingAddressPostalCode" id="shippingAddressPostalCode" placeholder="CEP sem traço"><br><br>
+        <input type="text" name="shippingAddressPostalCode" id="shippingAddressPostalCode" placeholder="CEP sem traço" value="01452002"><br><br>
 
         <label>Cidade</label>
-        <input type="text" name="shippingAddressCity" id="shippingAddressCity" placeholder="Cidade"><br><br>
+        <input type="text" name="shippingAddressCity" id="shippingAddressCity" placeholder="Cidade" value="Sao Paulo"><br><br>
 
         <label>Estado</label>
-        <input type="text" name="shippingAddressState" id="shippingAddressState" placeholder="Sigla do Estado"><br><br>
+        <input type="text" name="shippingAddressState" id="shippingAddressState" placeholder="Sigla do Estado" value="SP"><br><br>
 
         <label>País</label>
         <input type="text" name="shippingAddressCountry" id="shippingAddressCountry" value="BRL"><br><br>
@@ -92,15 +92,15 @@
         <span class="bandeira-cartao"></span><br><br>
 
         <label>CVV do cartão</label>
-        <input type="text" name="cvvCartao" id="cvvCartao" maxlength="3"><br><br>
+        <input type="text" name="cvvCartao" id="cvvCartao" maxlength="3" value='123'><br><br>
 
         <input type="hidden" name="bandeiraCartao" id="bandeiraCartao">
 
         <label>Mês de Validade</label>
-        <input type="text" name="mesCartao" id="mesCartao" maxlength="2"><br><br>
+        <input type="text" name="mesCartao" id="mesCartao" maxlength="2" value="12"><br><br>
 
         <label>Ano de Validade</label>
-        <input type="text" name="anoCartao" id="anoCartao" maxlength="4"><br><br>
+        <input type="text" name="anoCartao" id="anoCartao" maxlength="4" value="2030"><br><br>
 
         <label>Quantidades de Parcelas</label>
         <select name="qtdParcelas" id="qtdParcelas" class="qtd-parcelas">
@@ -111,10 +111,10 @@
         <input type="text" name="valorParcelas" id="valorParcelas"><br><br>
 
         <label>CPF do Cartão</label>
-        <input type="text" name="creditCardHolderCPF" id="creditCardHolderCPF" placeholder="CPF sem traço" required><br><br>
+        <input type="text" name="creditCardHolderCPF" id="creditCardHolderCPF" placeholder="CPF sem traço" required value="22111944785"><br><br>
 
         <label>Nome no Cartão</label>
-        <input type="text" name="creditCardHolderName" id="creditCardHolderName" placeholder="Nome igual ao escrito no cartão" required><br><br>
+        <input type="text" name="creditCardHolderName" id="creditCardHolderName" placeholder="Nome igual ao escrito no cartão" required value="27/10/1987"><br><br>
 
         <label>Token do cartão</label>
         <input type="text" name="tokenCartao" id="tokenCartao"><br><br>
@@ -125,25 +125,25 @@
         <h2>Endereço do Cartão</h2>
 
         <label>Logradouro</label>
-        <input type="text" name="billingAddressStreet" id="billingAddressStreet" placeholder="Av. Rua"><br><br>
+        <input type="text" name="billingAddressStreet" id="billingAddressStreet" placeholder="Av. Rua" value="Av. Brig. Faria Lima"><br><br>
 
         <label>Número</label>
-        <input type="text" name="billingAddressNumber" id="billingAddressNumber" placeholder="Número"><br><br>
+        <input type="text" name="billingAddressNumber" id="billingAddressNumber" placeholder="Número" value="1384"><br><br>
 
         <label>Complemento</label>
-        <input type="text" name="billingAddressComplement" id="billingAddressComplement" placeholder="Complemento"><br><br>
+        <input type="text" name="billingAddressComplement" id="billingAddressComplement" placeholder="Complemento" value="5o andar"><br><br>
 
         <label>Bairro</label>
-        <input type="text" name="billingAddressDistrict" id="billingAddressDistrict" placeholder="Bairro"><br><br>
+        <input type="text" name="billingAddressDistrict" id="billingAddressDistrict" placeholder="Bairro" value="Jardim Paulistano"><br><br>
 
         <label>CEP</label>
-        <input type="text" name="billingAddressPostalCode" id="billingAddressPostalCode" placeholder="CEP sem traço"><br><br>
+        <input type="text" name="billingAddressPostalCode" id="billingAddressPostalCode" placeholder="CEP sem traço" value="01452002"><br><br>
 
         <label>Cidade</label>
-        <input type="text" name="billingAddressCity" id="billingAddressCity" placeholder="Cidade"><br><br>
+        <input type="text" name="billingAddressCity" id="billingAddressCity" placeholder="Cidade" value="Sao Paulo"><br><br>
 
         <label>Estado</label>
-        <input type="text" name="billingAddressState" id="billingAddressState" placeholder="Sigla do Estado"><br><br>
+        <input type="text" name="billingAddressState" id="billingAddressState" placeholder="Sigla do Estado" value="SP"><br><br>
 
         <label>País</label>
         <input type="text" name="billingAddressCountry" id="billingAddressCountry" value="BRL"><br><br>
