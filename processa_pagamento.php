@@ -69,6 +69,6 @@
 
     $xml = simplexml_load_string($retorno);
 
-    $retorna = ['erro' => true, 'dados' => $xml];
+    $retorna = ['erro' => true, 'dados' => $dados];
     header('Content-Type: application/json');
     echo json_encode($retorna);
