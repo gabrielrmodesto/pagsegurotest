@@ -1,6 +1,6 @@
 <?php
 
-    require 'config.php';
+    require './config.php';
 
     $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -9,7 +9,7 @@
 
     $dadosArray["paymentMode"] = "default";
     $dadosArray["paymentMethod"] = $dados["paymentMethod"];
-    $dadosArray["receiverEmail"] = $dados["receiverEmail"];
+    $dadosArray["receiverEmail"] = EMAIL_LOJA;
     $dadosArray["currency"] = $dados["currency"];
     $dadosArray["extraAmount"] = $dados["extraAmount"];
     $dadosArray["itemId1"] = $dados["itemId1"];
@@ -55,10 +55,10 @@
     $dadosArray["billingAddressCountry"] = $dados["billingAddressCountry"];
 
     $buildQuery = http_build_query($dadosArray);
-    $url = URL_PAGSEGURO + "transactions";
+    $url = URL_PAGSEGURO."transactions";
     
     $curl = curl_init($url);
-    curl_setopt($curl, CURLOPT_HTTPHEADER, "Content-Type: application/x-www-form-urlencoded; charset=UTF-8");
+    curl_setopt($curl, CURLOPT_HTTPHEADER, array("Content-Type: application/x-www-form-urlencoded; charset=UTF-8"));
     curl_setopt($curl, CURLOPT_POST, true);
     //pagseguro exige
     curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
@@ -66,7 +66,6 @@
     curl_setopt($curl, CURLOPT_POSTFIELDS, $buildQuery);
     $retorno = curl_exec($curl);
     curl_close($curl);
-
 
     $xml = simplexml_load_string($retorno);
 
