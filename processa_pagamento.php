@@ -39,7 +39,7 @@
     $dadosArray["installmentQuantity"] = $dados["qtdParcelas"];
     $dadosArray["installmentValue"] = $dados["valorParcelas"];
     //parcelas sem juros
-    $dadosArray["noInterestInstallmentQuantity"] = 3;
+    $dadosArray["noInterestInstallmentQuantity"] = $dados["noInterestInstallmentQuantity"];
     $dadosArray["creditCardHolderName"] = $dados["creditCardHolderName"];
     $dadosArray["creditCardHolderCPF"] = $dados["creditCardHolderCPF"];
     $dadosArray["creditCardHolderBirthDate"] = $dados["creditCardHolderBirthDate"];

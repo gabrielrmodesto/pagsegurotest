@@ -1,6 +1,6 @@
+var amount = $("#amount").val();
 pagamento();
-//valor da compra
-var valorTotal = 600.00;
+
 function pagamento(){
     var endereco = jQuery('.endereco').attr("data-endereco");
     $.ajax({
@@ -19,7 +19,7 @@ function pagamento(){
 
 function listarMeiosPagamentos(){ 
     PagSeguroDirectPayment.getPaymentMethods({
-        amount: valorTotal,
+        amount: amount,
         success: function(retorno) {
             // Retorna os meios de pagamento disponíveis.
             $('.meio-pagamento').append("<div>Cartão de Crédito</div>");
@@ -74,10 +74,12 @@ $('#numCartao').on('keyup', function(){
 });
 //parcelamento da compra
 function recuperaParcelas(bandeira){
+    var parcelaSemJuros = $("#noInterestInstallmentQuantity").val();
     PagSeguroDirectPayment.getInstallments({
-		amount: valorTotal,
+        
+		amount: amount,
 		//parcelas com juros
-		maxInstallmentNoInterest: 3,
+		maxInstallmentNoInterest: parcelaSemJuros,
 		brand: bandeira,
 		success: function(retorno){
             // Retorna as opções de parcelamento disponíveis

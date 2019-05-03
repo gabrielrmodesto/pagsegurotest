@@ -32,6 +32,10 @@
 
         <input type="hidden" name="reference" id="reference" value="1001">
 
+        <input type="hidden" name="amount" id="amount" value="600.00">
+
+        <input type="hidden" name="noInterestInstallmentQuantity" id="noInterestInstallmentQuantity" value="3">
+
         <h2>Dados do Comprador</h2>
 
         <label>Nome</label>
@@ -84,7 +88,7 @@
         <input type="radio" name="shippingType" value="3" checked> Sem frete<br><br>
 
         <label>Valor Frete</label>
-        <input type="text" name="shippingCost" id="senderCPF" placeholder="Preço do frete. Ex: 0" value="0,00"><br><br>
+        <input type="text" name="shippingCost" id="senderCPF" placeholder="Preço do frete. Ex: 0" value="0.00"><br><br>
 
         <h2>Dados do Cartão</h2>
         <label>Número do cartão</label>
