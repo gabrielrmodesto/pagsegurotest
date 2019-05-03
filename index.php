@@ -18,7 +18,7 @@
         
         <input type="hidden" name="currency" id="currency" value="<?php echo MOEDA_PAGAMENTO; ?>">
 
-        <input type="hidden" name="extraAmount" id="extraAmount" value="">
+        <!-- <input type="hidden" name="extraAmount" id="extraAmount" value=""> -->
 
         <input type="hidden" name="itemId1" id="itemId1" value="0001">
 
@@ -81,10 +81,10 @@
         <label>Frete</label>
         <input type="radio" name="shippingType" value="1"> PAC
         <input type="radio" name="shippingType" value="2"> SEDEX
-        <input type="radio" name="shippingType" value="3"> Sem frete<br><br>
+        <input type="radio" name="shippingType" value="3" checked> Sem frete<br><br>
 
         <label>Valor Frete</label>
-        <input type="text" name="shippingCost" id="senderCPF" placeholder="Preço do frete. Ex: 2.10"><br><br>
+        <input type="text" name="shippingCost" id="senderCPF" placeholder="Preço do frete. Ex: 0" value="0,00"><br><br>
 
         <h2>Dados do Cartão</h2>
         <label>Número do cartão</label>
