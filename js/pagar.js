@@ -145,7 +145,7 @@ function recuperaHash (){
                 data: dados,
                 dataType: "json",
                 success: function(retorna){
-                    console.log("Sucesso" + retorna);
+                    console.log("Sucesso" + JSON.stringify(retorna));
                 },
                 error: function(retorna){
                     console.log("Erro");
