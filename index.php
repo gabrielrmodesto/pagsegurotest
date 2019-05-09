@@ -6,7 +6,7 @@ include './config.php';
 
 <head>
     <meta charset="UTF-8">
-    <title>Celke - PagSeguro</title>
+    <title>PagSeguro</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
 
