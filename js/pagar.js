@@ -1,4 +1,4 @@
-var amount = $("#itemId1").val();
+var amount = $("#itemAmount1").val();
 //var amount = "600.00";
 pagamento();
 
