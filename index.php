@@ -34,7 +34,7 @@ include './config.php';
 
         <input type="hidden" name="reference" id="reference" value="1001">
 
-        <input type="hidden" name="amount" id="amount" value="600.00">
+        <!-- <input type="hidden" name="amount" id="amount" value="600.00"> -->
 
         <input type="hidden" name="noIntInstalQuantity" id="noIntInstalQuantity" value="2">
 
