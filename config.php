@@ -1,7 +1,7 @@
 <?php
 
 //Necessário testar em dominio com SSL
-define ("URL", "https://pagseguroapptest.herokuapp.com/");
+define ("URL", "url_page");
 
 $sandbox = true;
 if ($sandbox) {
